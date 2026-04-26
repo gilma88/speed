@@ -24,7 +24,7 @@
   padding: 6px 14px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 17px;
   transition: all 0.2s;
 }
 
@@ -33,11 +33,11 @@
 .coin-display-sm {
   color: #f1c40f;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .diff-badge {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 2px;
   color: #aaa;
@@ -54,7 +54,7 @@
   border-radius: 10px;
   background: rgba(255,255,255,0.08);
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -72,7 +72,7 @@
 
 .coins-earned {
   color: #f1c40f;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   margin: 4px 0 0;
 }
@@ -106,8 +106,8 @@
   line-height: 1;
 }
 
-.win-text { color: #2ecc71; font-size: 32px; font-weight: 800; }
-.lose-text { color: #e74c3c; font-size: 32px; font-weight: 800; }
+.win-text { color: #2ecc71; font-size: 40px; font-weight: 800; }
+.lose-text { color: #e74c3c; font-size: 40px; font-weight: 800; }
 
 .gameover-buttons {
   display: flex;
@@ -136,13 +136,13 @@
 
 .area-label {
   color: #aaa;
-  font-size: 13px;
+  font-size: 17px;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.card-count { color: #666; font-size: 12px; }
+.card-count { color: #666; font-size: 15px; }
 
 .tableau {
   display: flex;
@@ -222,14 +222,14 @@
 }
 
 .pile-count {
-  font-size: 11px;
+  font-size: 15px;
   color: #888;
 }
 
 /* Spit button */
 .spit-btn {
   padding: 14px 50px;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 900;
   letter-spacing: 4px;
   border: none;
@@ -312,14 +312,14 @@
 
 .hint-text {
   color: #555;
-  font-size: 12px;
+  font-size: 15px;
   margin: 0;
   min-height: 16px;
 }
 
 .btn-primary {
   padding: 12px 40px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
   border: none;
   border-radius: 10px;
