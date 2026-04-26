@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSnapshot } from '../hooks/useSnapshot';
-import { spitAction, playCardAction, moveToEmptyAction, stackSameRankAction, returnToMenu, startGame } from '../store/gameStore';
+import { spitAction, playCardAction, moveToEmptyAction, stackSameRankAction, returnToMenu, startGame, setPlayerName } from '../store/gameStore';
 import { CardView, CardBack } from './CardView';
 import { canPlay } from '../game/rules';
 import './GameBoard.css';
@@ -8,14 +8,26 @@ import './GameBoard.css';
 export function GameBoard() {
   const { game, store } = useSnapshot();
   const [selected, setSelected] = useState<{ pile: number; card: number } | null>(null);
+  const [editingName, setEditingName] = useState(false);
+  const [nameInput, setNameInput] = useState('');
 
   if (!game) return null;
+
+  function handleEditName() {
+    setNameInput(store.playerName);
+    setEditingName(true);
+  }
+
+  function handleSaveName() {
+    setPlayerName(nameInput);
+    setEditingName(false);
+  }
 
   const cardBack = store.cardBacks.find(b => b.id === store.activeCardBack)!;
   const { player, computer, center, phase, message, difficulty } = game;
 
   function handleTableauClick(pileIdx: number) {
-    if (phase !== 'playing' && phase !== 'roundEnd') return;
+    if (phase !== 'playing' && phase !== 'roundEnd' && phase !== 'stuck') return;
     const pile = player.tableau[pileIdx];
 
     if (selected !== null) {
@@ -73,6 +85,27 @@ export function GameBoard() {
         <div className="coin-display-sm">🪙 {store.coins}</div>
         <span className="diff-badge">{difficulty.toUpperCase()}</span>
       </div>
+
+      {/* Name edit modal */}
+      {editingName && (
+        <div className="name-edit-overlay" onClick={() => setEditingName(false)}>
+          <div className="name-edit-box" onClick={e => e.stopPropagation()}>
+            <p>Your name</p>
+            <input
+              className="name-input"
+              value={nameInput}
+              onChange={e => setNameInput(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handleSaveName()}
+              maxLength={20}
+              autoFocus
+            />
+            <div className="name-edit-btns">
+              <button className="btn-primary" onClick={handleSaveName}>Save</button>
+              <button className="btn-secondary" onClick={() => setEditingName(false)}>Cancel</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* In-play message (stuck, round end) */}
       {message && phase !== 'gameOver' && (
@@ -174,7 +207,9 @@ export function GameBoard() {
 
       {/* Player tableau */}
       <div className="player-area">
-        <p className="area-label">You
+        <p className="area-label">
+          {store.playerName}
+          <button className="edit-name-btn" onClick={handleEditName} title="Edit name">✏️</button>
           <span className="card-count"> ({player.tableau.reduce((s, p) => s + p.length, 0)} + {player.spit.length})</span>
         </p>
         <div className="tableau">

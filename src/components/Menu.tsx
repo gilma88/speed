@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { Difficulty } from '../types';
-import { startGame, claimDailyLogin, buyCardBack, selectCardBack } from '../store/gameStore';
+import { startGame, claimDailyLogin, buyCardBack, selectCardBack, setPlayerName } from '../store/gameStore';
 import { useSnapshot } from '../hooks/useSnapshot';
 import './Menu.css';
 import './CardView.css';
@@ -10,6 +10,8 @@ export function Menu() {
   const [diff, setDiff] = useState<Difficulty>('medium');
   const [showDailyToast, setShowDailyToast] = useState(false);
   const [openShop, setOpenShop] = useState(false);
+  const [editingName, setEditingName] = useState(false);
+  const [nameInput, setNameInput] = useState('');
 
   function handleStart() {
     const claimed = claimDailyLogin();
@@ -24,14 +26,44 @@ export function Menu() {
     }
   }
 
+  function handleSaveName() {
+    setPlayerName(nameInput);
+    setEditingName(false);
+  }
+
   return (
     <div className="menu">
       {showDailyToast && (
         <div className="daily-toast">+150 coins — daily bonus!</div>
       )}
 
+      {editingName && (
+        <div className="name-edit-overlay" onClick={() => setEditingName(false)}>
+          <div className="name-edit-box" onClick={e => e.stopPropagation()}>
+            <p>Your name</p>
+            <input
+              className="name-input"
+              value={nameInput}
+              onChange={e => setNameInput(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handleSaveName()}
+              maxLength={20}
+              autoFocus
+            />
+            <div className="name-edit-btns">
+              <button className="btn-primary" onClick={handleSaveName}>Save</button>
+              <button className="btn-secondary" onClick={() => setEditingName(false)}>Cancel</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <h1 className="menu-title">SPEED</h1>
       <p className="menu-sub">The fast-paced card game</p>
+
+      <div className="player-name-row">
+        <span className="player-name-display">{store.playerName}</span>
+        <button className="edit-name-btn-menu" onClick={() => { setNameInput(store.playerName); setEditingName(true); }} title="Edit name">✏️</button>
+      </div>
 
       <div className="coin-display">
         <span className="coin-icon">🪙</span>

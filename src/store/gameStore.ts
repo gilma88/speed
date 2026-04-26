@@ -21,7 +21,7 @@ function loadStore(): StoreState {
         const found = saved.cardBacks.find(b => b.id === def.id);
         return found ? { ...def, owned: found.owned } : def;
       });
-      return { ...saved, cardBacks: merged };
+      return { ...saved, cardBacks: merged, playerName: saved.playerName ?? 'Player' };
     }
   } catch { /* ignore */ }
   return {
@@ -29,6 +29,7 @@ function loadStore(): StoreState {
     cardBacks: DEFAULT_CARD_BACKS,
     activeCardBack: 'classic',
     lastLoginDate: null,
+    playerName: 'Player',
   };
 }
 
@@ -129,6 +130,14 @@ export function buyCardBack(id: string) {
   saveStore(store);
   notify();
   return true;
+}
+
+export function setPlayerName(name: string) {
+  const trimmed = name.trim().slice(0, 20);
+  if (!trimmed) return;
+  store = { ...store, playerName: trimmed };
+  saveStore(store);
+  notify();
 }
 
 export function selectCardBack(id: string) {

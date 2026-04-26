@@ -90,7 +90,7 @@
 }
 
 .gameover-card {
-  background: #1a1a2e;
+  background: #1a3a28;
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 20px;
   padding: 40px 48px;
@@ -251,6 +251,64 @@
   0%, 100% { box-shadow: 0 4px 24px rgba(231,76,60,0.5); }
   50%        { box-shadow: 0 4px 32px rgba(231,76,60,0.9); }
 }
+
+/* Edit name */
+.edit-name-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  vertical-align: middle;
+}
+.edit-name-btn:hover { opacity: 1; }
+
+.name-edit-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+}
+
+.name-edit-box {
+  background: #1a3a28;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 28px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  min-width: 260px;
+}
+
+.name-edit-box p { color: #ccc; font-size: 14px; letter-spacing: 1px; }
+
+.name-input {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 14px;
+  width: 100%;
+  outline: none;
+  text-align: center;
+}
+.name-input:focus { border-color: #2ecc71; }
+
+.name-edit-btns {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.name-edit-btns .btn-primary,
+.name-edit-btns .btn-secondary { flex: 1; text-align: center; }
 
 .hint-text {
   color: #555;

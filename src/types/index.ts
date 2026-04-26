@@ -40,4 +40,5 @@ export interface StoreState {
   cardBacks: CardBack[];
   activeCardBack: string;
   lastLoginDate: string | null;
+  playerName: string;
 }
