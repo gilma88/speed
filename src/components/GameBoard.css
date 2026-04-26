@@ -330,3 +330,31 @@
 }
 
 .btn-primary:hover { transform: translateY(-2px); }
+
+@media (max-width: 600px) {
+  .game-board { padding: 8px; gap: 8px; }
+  .btn-back { font-size: 14px; padding: 5px 10px; }
+  .coin-display-sm { font-size: 16px; }
+  .diff-badge { font-size: 12px; padding: 3px 7px; }
+  .message-banner { font-size: 15px; padding: 8px 12px; }
+  .coins-earned { font-size: 22px; }
+  .gameover-icon { font-size: 56px; }
+  .win-text, .lose-text { font-size: 34px; }
+  .area-label { font-size: 14px; }
+  .card-count { font-size: 12px; }
+  .tableau { gap: 6px; }
+  .tableau-pile { width: 52px; height: 160px; }
+  .empty-pile { width: 52px; height: 74px; font-size: 18px; }
+  .center-area { gap: 10px; }
+  .center-piles { gap: 10px; }
+  .center-empty { font-size: 18px; }
+  .pile-count { font-size: 12px; }
+  .spit-btn { font-size: 22px; padding: 10px 30px; letter-spacing: 2px; }
+  .hint-text { font-size: 12px; }
+  .btn-primary { font-size: 18px; padding: 10px 24px; }
+  .btn-secondary { font-size: 15px; }
+  .name-edit-box { min-width: 240px; padding: 20px 24px; }
+  .name-edit-box p { font-size: 15px; }
+  .name-input { font-size: 18px; }
+  .gameover-card { padding: 28px 24px; }
+}

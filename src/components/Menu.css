@@ -308,3 +308,25 @@
   opacity: 0.4;
   cursor: not-allowed;
 }
+
+@media (max-width: 600px) {
+  .menu { padding: 24px 12px; gap: 14px; }
+  .menu-title { font-size: 72px; letter-spacing: 4px; }
+  .menu-sub { font-size: 14px; }
+  .player-name-display { font-size: 16px; }
+  .coin-display { font-size: 18px; padding: 6px 14px; }
+  .diff-select p { font-size: 15px; }
+  .diff-btn { font-size: 15px; padding: 8px 14px; }
+  .btn-primary { font-size: 20px; padding: 12px 40px; }
+  .btn-secondary { font-size: 16px; padding: 8px 20px; }
+  .daily-toast { font-size: 16px; padding: 10px 20px; }
+  .shop-panel { padding: 16px; gap: 10px; }
+  .shop-panel h2 { font-size: 22px; }
+  .shop-coins { font-size: 16px; }
+  .shop-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .back-name { font-size: 11px; }
+  .btn-use, .btn-buy { font-size: 11px; padding: 3px 6px; }
+  .card-preview { width: 36px; height: 52px; }
+  .name-edit-box p { font-size: 15px; }
+  .name-input { font-size: 17px; }
+}
