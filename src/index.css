@@ -3,7 +3,14 @@
 body {
   margin: 0;
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  background: #0d3b1e;
+  background-color: #0d3b1e;
+  background-image:
+    radial-gradient(circle, #f1c40f 2px, transparent 2px),
+    radial-gradient(circle, #e74c3c 2px, transparent 2px),
+    radial-gradient(circle, #3498db 2px, transparent 2px),
+    radial-gradient(circle, #2ecc71 2px, transparent 2px);
+  background-size: 56px 56px, 56px 56px, 56px 56px, 56px 56px;
+  background-position: 0 0, 14px 14px, 28px 28px, 42px 42px;
   color: #e0e0e0;
   -webkit-font-smoothing: antialiased;
 }
