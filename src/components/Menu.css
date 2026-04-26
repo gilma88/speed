@@ -223,32 +223,34 @@
   background: #1a3a28;
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 16px;
-  padding: 32px;
-  max-width: 560px;
-  width: 90%;
+  padding: 20px;
+  max-width: 640px;
+  width: 95%;
+  max-height: 88vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
 
 .shop-panel h2 {
   color: #ffd93d;
   margin: 0;
-  font-size: 49px;
+  font-size: 32px;
 }
 
 .shop-coins {
   color: #f1c40f;
-  font-size: 34px;
+  font-size: 22px;
   font-weight: 600;
   margin: 0;
 }
 
 .shop-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   width: 100%;
 }
 
@@ -256,8 +258,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 12px;
+  gap: 6px;
+  padding: 8px;
   border-radius: 10px;
   border: 2px solid rgba(255,255,255,0.1);
   background: rgba(255,255,255,0.03);
@@ -269,24 +271,24 @@
 }
 
 .card-preview {
-  width: 60px;
-  height: 86px;
-  border-radius: 6px;
+  width: 44px;
+  height: 62px;
+  border-radius: 5px;
   border: 2px solid rgba(255,255,255,0.2);
 }
 
 .back-name {
   color: #6bcb77;
-  font-size: 24px;
+  font-size: 15px;
   margin: 0;
   text-align: center;
 }
 
 .btn-use, .btn-buy {
-  padding: 5px 14px;
+  padding: 4px 10px;
   border-radius: 6px;
   border: none;
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   transition: opacity 0.2s;
