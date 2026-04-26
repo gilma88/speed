@@ -1,0 +1,233 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.menu-title {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  color: #fff;
+  text-shadow: 0 0 30px #e74c3c, 0 0 60px #c0392b;
+  margin: 0;
+}
+
+.menu-sub {
+  color: #aaa;
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.coin-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  padding: 8px 20px;
+  border-radius: 30px;
+  color: #f1c40f;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.diff-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.diff-select p {
+  margin: 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.diff-select {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.diff-btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: #ccc;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.diff-btn:hover {
+  border-color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.1);
+}
+
+.diff-btn.active {
+  border-color: #e74c3c;
+  background: rgba(231,76,60,0.2);
+  color: #fff;
+}
+
+.btn-primary {
+  padding: 14px 60px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(231,76,60,0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+  letter-spacing: 2px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(231,76,60,0.6);
+}
+
+.btn-secondary {
+  padding: 10px 30px;
+  font-size: 15px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  background: transparent;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+.daily-toast {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f1c40f;
+  color: #1a1a2e;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(241,196,15,0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -10px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Shop */
+.shop-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+
+.shop-panel {
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 560px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.shop-panel h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 26px;
+}
+
+.shop-coins {
+  color: #f1c40f;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.shop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
+}
+
+.shop-item.active {
+  border-color: #f1c40f;
+  background: rgba(241,196,15,0.08);
+}
+
+.card-preview {
+  width: 60px;
+  height: 86px;
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.back-name {
+  color: #ddd;
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
+
+.btn-use, .btn-buy {
+  padding: 5px 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-use {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.btn-buy {
+  background: #f1c40f;
+  color: #1a1a2e;
+}
+
+.btn-use:disabled, .btn-buy:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

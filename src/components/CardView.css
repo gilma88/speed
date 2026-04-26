@@ -1,0 +1,109 @@
+.card {
+  width: 70px;
+  height: 100px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.4);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: transform 0.15s, box-shadow 0.15s;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 2px 8px 16px rgba(0,0,0,0.5);
+}
+
+.card-small {
+  width: 50px;
+  height: 72px;
+  border-radius: 6px;
+}
+
+.card-face {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-face.red { color: #c0392b; }
+.card-face.black { color: #1a1a2e; }
+
+.card-face.selected {
+  outline: 3px solid #f1c40f;
+  transform: translateY(-8px);
+  box-shadow: 0 0 16px #f1c40f99;
+}
+
+.card-corner {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+.card-small .card-corner { font-size: 9px; }
+
+.top-left { top: 4px; left: 5px; }
+.bottom-right { bottom: 4px; right: 5px; transform: rotate(180deg); }
+
+.card-center {
+  font-size: 28px;
+  line-height: 1;
+}
+.card-small .card-center { font-size: 20px; }
+
+/* Card back patterns */
+.card-back {
+  background-image: none;
+}
+
+.pattern-crosshatch {
+  background-image: repeating-linear-gradient(
+    45deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 2px, transparent 0, transparent 50%
+  ), repeating-linear-gradient(
+    -45deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 2px, transparent 0, transparent 50%
+  );
+  background-size: 14px 14px;
+}
+
+.pattern-diamond {
+  background-image: repeating-linear-gradient(
+    45deg, rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 3px, transparent 0, transparent 20px
+  );
+}
+
+.pattern-stars {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+.pattern-leaves {
+  background-image: repeating-linear-gradient(
+    90deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 1px, transparent 0, transparent 12px
+  ), repeating-linear-gradient(
+    0deg, rgba(255,255,255,0.1) 0, rgba(255,255,255,0.1) 1px, transparent 0, transparent 12px
+  );
+}
+
+.pattern-waves {
+  background-image: repeating-linear-gradient(
+    -55deg,
+    rgba(255,255,255,0.1),
+    rgba(255,255,255,0.1) 5px,
+    transparent 5px,
+    transparent 15px
+  );
+}
+
+.pattern-grid {
+  background-image: repeating-linear-gradient(
+    0deg, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 1px, transparent 0, transparent 10px
+  ), repeating-linear-gradient(
+    90deg, rgba(255,255,255,0.2) 0, rgba(255,255,255,0.2) 1px, transparent 0, transparent 10px
+  );
+}

@@ -1,0 +1,274 @@
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.board-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-back {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #aaa;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.btn-back:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+
+.coin-display-sm {
+  color: #f1c40f;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.diff-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #aaa;
+  background: rgba(255,255,255,0.05);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Message banner */
+.message-banner {
+  width: 100%;
+  text-align: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.message-banner.win {
+  background: rgba(46,204,113,0.25);
+  border: 1px solid #2ecc71;
+  color: #2ecc71;
+}
+
+.message-banner.lose {
+  background: rgba(231,76,60,0.2);
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+
+.coins-earned {
+  color: #f1c40f;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 4px 0 0;
+}
+
+/* Game over overlay */
+.gameover-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  animation: fadeIn 0.25s ease;
+}
+
+.gameover-card {
+  background: #1a1a2e;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.gameover-icon {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.win-text { color: #2ecc71; font-size: 32px; font-weight: 800; }
+.lose-text { color: #e74c3c; font-size: 32px; font-weight: 800; }
+
+.gameover-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.gameover-buttons .btn-primary,
+.gameover-buttons .btn-secondary {
+  width: 100%;
+  text-align: center;
+}
+
+/* Player area */
+.player-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.computer-area { opacity: 0.85; }
+
+.area-label {
+  color: #aaa;
+  font-size: 13px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-count { color: #666; font-size: 12px; }
+
+.tableau {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.tableau-pile {
+  position: relative;
+  width: 70px;
+  height: 140px;
+}
+
+.tableau-pile.clickable { cursor: pointer; }
+
+.tableau-pile.drop-target .empty-pile {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.stacked-card {
+  position: absolute;
+  left: 0;
+}
+
+.empty-pile {
+  width: 70px;
+  height: 100px;
+  border-radius: 8px;
+  border: 2px dashed rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.2);
+  font-size: 22px;
+  transition: all 0.2s;
+}
+
+/* Center */
+.center-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.center-piles {
+  display: flex;
+  gap: 20px;
+}
+
+.center-pile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.center-pile.playable:hover { transform: scale(1.04); }
+
+.center-empty {
+  border-style: dashed;
+  border-color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.35);
+  font-size: 22px;
+}
+
+.spit-pile-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.pile-count {
+  font-size: 11px;
+  color: #888;
+}
+
+/* Spit button */
+.spit-btn {
+  padding: 14px 50px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(231,76,60,0.5);
+  transition: transform 0.1s, box-shadow 0.1s;
+  animation: pulse 1.2s infinite;
+}
+
+.spit-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 32px rgba(231,76,60,0.7);
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 4px 24px rgba(231,76,60,0.5); }
+  50%        { box-shadow: 0 4px 32px rgba(231,76,60,0.9); }
+}
+
+.hint-text {
+  color: #555;
+  font-size: 12px;
+  margin: 0;
+  min-height: 16px;
+}
+
+.btn-primary {
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.btn-primary:hover { transform: translateY(-2px); }
