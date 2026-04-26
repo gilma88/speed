@@ -8,7 +8,7 @@
 }
 
 .menu-title {
-  font-size: 90px;
+  font-size: 120px;
   font-weight: 900;
   letter-spacing: 8px;
   color: #fff;
@@ -19,7 +19,7 @@
 .menu-sub {
   color: #aaa;
   margin: 0;
-  font-size: 18px;
+  font-size: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -32,7 +32,7 @@
 
 .player-name-display {
   color: #a8e6b8;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -41,7 +41,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 17px;
   opacity: 0.6;
   transition: opacity 0.2s;
   padding: 0;
@@ -68,17 +68,17 @@
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  min-width: 260px;
+  min-width: 280px;
 }
 
-.name-edit-box p { color: #ccc; font-size: 14px; letter-spacing: 1px; margin: 0; }
+.name-edit-box p { color: #ccc; font-size: 19px; letter-spacing: 1px; margin: 0; }
 
 .name-input {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.3);
   border-radius: 8px;
   color: #fff;
-  font-size: 18px;
+  font-size: 24px;
   padding: 8px 14px;
   width: 100%;
   outline: none;
@@ -103,7 +103,7 @@
   padding: 8px 20px;
   border-radius: 30px;
   color: #f1c40f;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 600;
 }
 
@@ -117,7 +117,7 @@
 .diff-select p {
   margin: 0;
   color: #ccc;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .diff-select {
@@ -133,7 +133,7 @@
   border: 2px solid rgba(255,255,255,0.2);
   background: rgba(255,255,255,0.05);
   color: #ccc;
-  font-size: 19px;
+  font-size: 26px;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -151,7 +151,7 @@
 
 .btn-primary {
   padding: 14px 60px;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
   border: none;
   border-radius: 12px;
@@ -170,7 +170,7 @@
 
 .btn-secondary {
   padding: 10px 30px;
-  font-size: 19px;
+  font-size: 26px;
   border: 2px solid rgba(255,255,255,0.2);
   border-radius: 10px;
   background: transparent;
@@ -193,7 +193,7 @@
   color: #1a1a2e;
   padding: 14px 32px;
   border-radius: 30px;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 700;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(241,196,15,0.5);
@@ -232,12 +232,12 @@
 .shop-panel h2 {
   color: #fff;
   margin: 0;
-  font-size: 26px;
+  font-size: 35px;
 }
 
 .shop-coins {
   color: #f1c40f;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   margin: 0;
 }
@@ -274,7 +274,7 @@
 
 .back-name {
   color: #ddd;
-  font-size: 12px;
+  font-size: 17px;
   margin: 0;
   text-align: center;
 }
@@ -283,7 +283,7 @@
   padding: 5px 14px;
   border-radius: 6px;
   border: none;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 600;
   cursor: pointer;
   transition: opacity 0.2s;
