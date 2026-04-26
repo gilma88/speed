@@ -4,6 +4,9 @@
   align-items: center;
   gap: 20px;
   padding: 40px 20px;
+  min-height: 100vh;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
 }
 
 .menu-title {
