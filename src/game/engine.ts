@@ -148,6 +148,26 @@ export function computerMove(state: GameState, difficulty: Difficulty): GameStat
     }
   }
 
+  // Move a card to an empty pile to uncover a face-down card beneath it
+  for (let p = 0; p < 5; p++) {
+    const fromPile = s.computer.tableau[p];
+    if (fromPile.length < 2) continue;
+    const fromTop = fromPile[fromPile.length - 1];
+    if (!fromTop.faceUp) continue;
+    const cardBelow = fromPile[fromPile.length - 2];
+    if (cardBelow.faceUp) continue; // nothing to uncover
+    for (let q = 0; q < 5; q++) {
+      if (p === q) continue;
+      if (s.computer.tableau[q].length === 0) {
+        fromPile.pop();
+        fromTop.faceUp = true;
+        s.computer.tableau[q] = [fromTop];
+        fromPile[fromPile.length - 1].faceUp = true;
+        return checkRoundEnd(s);
+      }
+    }
+  }
+
   return s;
 }
 
