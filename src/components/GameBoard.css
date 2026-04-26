@@ -19,8 +19,8 @@
 
 .btn-back {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #aaa;
+  border: 1px solid rgba(77,150,255,0.4);
+  color: #4d96ff;
   padding: 6px 14px;
   border-radius: 8px;
   cursor: pointer;
@@ -40,7 +40,7 @@
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #aaa;
+  color: #ff6bcb;
   background: rgba(255,255,255,0.05);
   padding: 4px 10px;
   border-radius: 6px;
@@ -53,7 +53,7 @@
   padding: 12px 20px;
   border-radius: 10px;
   background: rgba(255,255,255,0.08);
-  color: #fff;
+  color: #ffd93d;
   font-size: 27px;
   font-weight: 600;
 }
@@ -135,14 +135,14 @@
 .computer-area { opacity: 0.85; }
 
 .area-label {
-  color: #aaa;
+  color: #ffd93d;
   font-size: 23px;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.card-count { color: #666; font-size: 20px; }
+.card-count { color: #6bcb77; font-size: 20px; }
 
 .tableau {
   display: flex;
@@ -223,7 +223,7 @@
 
 .pile-count {
   font-size: 20px;
-  color: #888;
+  color: #4d96ff;
 }
 
 /* Spit button */
@@ -311,7 +311,7 @@
 .name-edit-btns .btn-secondary { flex: 1; text-align: center; }
 
 .hint-text {
-  color: #555;
+  color: #ff6bcb;
   font-size: 20px;
   margin: 0;
   min-height: 16px;
