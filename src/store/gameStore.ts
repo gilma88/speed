@@ -4,12 +4,18 @@ import { createInitialState, spit as doSpit, playCard as doPlayCard, computerMov
 const STORAGE_KEY = 'speed_store';
 
 const DEFAULT_CARD_BACKS: CardBack[] = [
-  { id: 'classic', name: 'Classic Blue', price: 0, color: '#1a3a6e', pattern: 'crosshatch', owned: true },
-  { id: 'royal', name: 'Royal Red', price: 100, color: '#8b0000', pattern: 'diamond', owned: false },
-  { id: 'midnight', name: 'Midnight', price: 150, color: '#0d0d2b', pattern: 'stars', owned: false },
-  { id: 'forest', name: 'Forest', price: 200, color: '#1a4a1a', pattern: 'leaves', owned: false },
-  { id: 'gold', name: 'Gold Rush', price: 300, color: '#b8860b', pattern: 'waves', owned: false },
-  { id: 'neon', name: 'Neon', price: 400, color: '#ff00ff', pattern: 'grid', owned: false },
+  { id: 'classic',  name: 'Classic Blue',   price: 0,    color: '#1a3a6e', pattern: 'crosshatch', owned: true },
+  { id: 'royal',    name: 'Royal Red',       price: 200,  color: '#8b0000', pattern: 'diamond',    owned: false },
+  { id: 'midnight', name: 'Midnight',        price: 350,  color: '#0d0d2b', pattern: 'stars',      owned: false },
+  { id: 'forest',   name: 'Forest',          price: 500,  color: '#1a4a1a', pattern: 'leaves',     owned: false },
+  { id: 'gold',     name: 'Gold Rush',       price: 700,  color: '#b8860b', pattern: 'waves',      owned: false },
+  { id: 'neon',     name: 'Neon',            price: 900,  color: '#ff00ff', pattern: 'grid',       owned: false },
+  { id: 'volcano',  name: 'Volcano',         price: 1200, color: '#7f1d1d', pattern: 'volcano',    owned: false },
+  { id: 'ocean',    name: 'Deep Ocean',      price: 1500, color: '#0c2a4a', pattern: 'ocean',      owned: false },
+  { id: 'galaxy',   name: 'Galaxy',          price: 2000, color: '#1a0033', pattern: 'galaxy',     owned: false },
+  { id: 'toxic',    name: 'Toxic',           price: 2500, color: '#0d2b0d', pattern: 'toxic',      owned: false },
+  { id: 'ice',      name: 'Ice Crystal',     price: 3000, color: '#0a2a3a', pattern: 'ice',        owned: false },
+  { id: 'inferno',  name: 'Inferno',         price: 4000, color: '#3d0a00', pattern: 'inferno',    owned: false },
 ];
 
 function loadStore(): StoreState {
