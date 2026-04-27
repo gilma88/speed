@@ -40,8 +40,16 @@ export function spit(state: GameState): GameState {
   const s = deepClone(state);
   const playerCard = s.player.spit.pop();
   const computerCard = s.computer.spit.pop();
-  if (playerCard) { playerCard.faceUp = true; s.center[0].push(playerCard); }
-  if (computerCard) { computerCard.faceUp = true; s.center[1].push(computerCard); }
+  if (playerCard && computerCard) {
+    playerCard.faceUp = true; s.center[0].push(playerCard);
+    computerCard.faceUp = true; s.center[1].push(computerCard);
+  } else if (playerCard) {
+    playerCard.faceUp = true; s.center[0].push(playerCard);
+    s.center[1] = [];
+  } else if (computerCard) {
+    computerCard.faceUp = true; s.center[1].push(computerCard);
+    s.center[0] = [];
+  }
   s.phase = 'playing';
   s.roundWinner = null;
   s.message = '';
